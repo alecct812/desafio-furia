@@ -19,8 +19,6 @@ O Chat Furioso é um assistente virtual especializado em informações sobre a F
   - Node.js
   - Express.js
   - Google Gemini AI
-  - CORS
-  - dotenv
 
 - **Frontend:**
   - HTML5
