@@ -137,15 +137,4 @@ server.js              # Servidor Express + API Gemini
 vercel.json            # Configuração de deploy na Vercel
 package.json           # Dependências e scripts
 ```
-
-## 🤝 Contribuindo
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature ou correção (`git checkout -b minha-feature`)
-3. Commit suas alterações (`git commit -m 'Minha contribuição'`)
-4. Faça push para a branch (`git push origin minha-feature`)
-5. Abra um Pull Request
-
----
-
 Se tiver dúvidas, sugestões ou quiser contribuir, fique à vontade para abrir uma issue ou PR!
