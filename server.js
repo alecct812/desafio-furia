@@ -2,7 +2,7 @@ import { GoogleGenAI } from '@google/genai';
 import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
-import { dirname } from 'path';
+import path from 'path';
 import { fileURLToPath } from 'url';
 
 dotenv.config();
@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/landing.html');
 });
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Função para limpar histórico antigo (manter apenas últimas 10 mensagens)
 function cleanHistory(history) {
