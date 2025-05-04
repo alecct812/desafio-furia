@@ -6,7 +6,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": "tailwindcss -i ./public/style/styles.css -o ./public/style/output.css"
   },
   "dependencies": {
     "@google/genai": "^0.12.0",
