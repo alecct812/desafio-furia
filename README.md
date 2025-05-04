@@ -61,7 +61,7 @@ Antes de começar, você precisará ter instalado em sua máquina:
 
 ```bash
 git clone [URL_DO_REPOSITÓRIO]
-cd furia-chat
+cd desafio-furia
 ```
 
 2. Instale as dependências:
@@ -100,7 +100,7 @@ http://localhost:3000
 ## 📁 Estrutura do Projeto
 
 ```
-furia-chat/
+desafio-furia/
 ├── public/
 │   ├── landing.html
 │   ├── chat.html
@@ -119,25 +119,3 @@ furia-chat/
 - **Porta do Servidor:** Por padrão, o servidor roda na porta 3000. Para alterar, modifique a variável `PORT` no arquivo `.env`.
 
 - **Modelo de IA:** O projeto utiliza o modelo `gemini-2.0-flash` por padrão. Para alterar, modifique a constante `model` no arquivo `server.js`.
-
-## 🤝 Contribuindo
-
-Contribuições são sempre bem-vindas! Para contribuir:
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 📞 Suporte
-
-Para suporte, envie um email para [seu-email@exemplo.com] ou abra uma issue no repositório.
-
----
-
-Desenvolvido com ❤️ para os fãs da FURIA
