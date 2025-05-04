@@ -22,16 +22,14 @@ O Chat Furioso é um assistente virtual especializado em informações sobre a F
 
 - **Frontend:**
   - HTML5
-  - CSS3
-  - Tailwind CSS
+  - Tailwind CSS (na landing page)
+  - CSS customizado (na página do chat)
   - JavaScript
 
 ## ⚙️ Pré-requisitos
 
-Antes de começar, você precisará ter instalado em sua máquina:
-
 - [Node.js](https://nodejs.org/) (versão 14 ou superior)
-- [npm](https://www.npmjs.com/) (geralmente vem com o Node.js)
+- [npm](https://www.npmjs.com/) (geralmente já vem com o Node.js)
 - Uma chave de API do Google Gemini AI
 
 ### 🔑 Como obter a chave de API do Google Gemini AI
@@ -52,15 +50,15 @@ Antes de começar, você precisará ter instalado em sua máquina:
 > **Importante:**
 >
 > - A chave de API é sensível e deve ser mantida em segredo. Nunca compartilhe ou exponha sua chave publicamente.
-> - É necessário ter um projeto no Google Cloud Console para usar a API do Gemini AI.
 > - O uso da API pode estar sujeito a limites e custos dependendo do seu plano.
+> - O modelo da I.A que está sendo utilizando por padrão é o gemini-2.5-pro-exp-03-25 por ser mais robusto, porém por ser a versão pro, caso o seu plano seja o grátis, ele vai ter limites de interação. Caso opte por não ter tanta limitação e continuar grátis, mude o modelo para o gemini-2.0-flash
 
 ## 🔑 Configuração do Ambiente
 
 1. Clone o repositório:
 
 ```bash
-git clone [URL_DO_REPOSITÓRIO]
+git clone [URL_DO_REPOSITORIO]
 cd desafio-furia
 ```
 
@@ -70,22 +68,40 @@ cd desafio-furia
 npm install
 ```
 
-3. Crie um arquivo `.env` na raiz do projeto e adicione sua chave de API e a porta na qual vai ser executada:
+3. Crie um arquivo `.env` na raiz do projeto e adicione sua chave de API e a porta desejada:
 
 ```env
 GEMINI_API_KEY=sua_chave_api_aqui
-PORT=sua_porta_aqui
+PORT=3000
 ```
 
-## 🏃‍♂️ Como Executar
+## 🏗️ Build do Tailwind CSS
 
-1. Inicie o servidor em modo desenvolvimento:
+A landing page utiliza Tailwind CSS. Para gerar o CSS final, execute:
+
+```bash
+npm run build
+```
+
+Esse comando irá compilar o arquivo `public/style/landing.css` (que importa o Tailwind e estilos customizados) para `public/style/output.css`, que é utilizado na landing page.
+
+> **Obs:** A página do chat (`chat.html`) utiliza apenas CSS customizado (`public/style/styles.css`).
+
+## 🏃‍♂️ Como Executar Localmente
+
+1. Gere o CSS do Tailwind (se ainda não fez):
+
+```bash
+npm run build
+```
+
+2. Inicie o servidor em modo desenvolvimento (com recarregamento automático):
 
 ```bash
 npm run dev
 ```
 
-2. Para produção:
+Ou, para rodar em modo produção:
 
 ```bash
 npm start
@@ -97,9 +113,39 @@ npm start
 http://localhost:3000
 ```
 
+- A landing page estará disponível na raiz.
+- O chat pode ser acessado pelo botão "Acessar Chat" ou diretamente em `/chat.html`.
 
-## 🔧 Configurações Adicionais
 
-- **Porta do Servidor:** Por padrão, o servidor roda na porta 3000. Para alterar, modifique a variável `PORT` no arquivo `.env`.
+## 📂 Estrutura de Pastas
 
-- **Modelo de IA:** O projeto utiliza o modelo `gemini-2.0-flash` por padrão. Para alterar, modifique a constante `model` no arquivo `server.js`.
+```
+public/
+  landing.html         # Landing page (usa Tailwind)
+  chat.html            # Página do chat (CSS customizado)
+  style/
+    landing.css        # Entrada do Tailwind + customizações
+    output.css         # CSS gerado pelo Tailwind (não editar manualmente)
+    styles.css         # CSS customizado do chat
+  scripts/
+    script.js          # Lógica do chat
+  resources/
+    images/            # Imagens usadas no site
+    favicon/           # Favicon
+.env                   # Variáveis de ambiente (não versionado)
+server.js              # Servidor Express + API Gemini
+vercel.json            # Configuração de deploy na Vercel
+package.json           # Dependências e scripts
+```
+
+## 🤝 Contribuindo
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature ou correção (`git checkout -b minha-feature`)
+3. Commit suas alterações (`git commit -m 'Minha contribuição'`)
+4. Faça push para a branch (`git push origin minha-feature`)
+5. Abra um Pull Request
+
+---
+
+Se tiver dúvidas, sugestões ou quiser contribuir, fique à vontade para abrir uma issue ou PR!
