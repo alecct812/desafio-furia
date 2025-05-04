@@ -97,22 +97,6 @@ npm start
 http://localhost:3000
 ```
 
-## 📁 Estrutura do Projeto
-
-```
-desafio-furia/
-├── public/
-│   ├── landing.html
-│   ├── chat.html
-│   ├── landing.css
-│   └── resources/
-│       ├── images/
-│       └── favicon/
-├── server.js
-├── package.json
-├── .env
-└── README.md
-```
 
 ## 🔧 Configurações Adicionais
 
