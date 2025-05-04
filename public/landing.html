@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FURIA - Chat Furioso</title>
+    <link
+      rel="shortcut icon"
+      href="resources/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style/landing.css" />
+  </head>
+  <body class="relative min-h-screen flex flex-col justify-center items-center">
+    <!-- Logo Superior -->
+    <nav
+      class="w-full flex items-center justify-start px-8 py-6 absolute top-0 left-0 z-10"
+    >
+      <div class="flex items-center space-x-2">
+        <img
+          src="resources/images/furia_small.png"
+          alt="Logo FURIA"
+          class="h-9 w-9"
+        />
+        <span class="text-white text-xl font-bold tracking-wide">FURIA</span>
+      </div>
+    </nav>
+
+    <!-- Conteúdo Central -->
+    <main
+      class="flex flex-1 flex-col items-center justify-center text-center px-4 relative z-10 mt-20"
+    >
+      <h1
+        class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight"
+      >
+        Novo <span class="furia-gold">Chat Interativo</span><br />
+        da FURIA
+      </h1>
+
+      <p class="text-lg md:text-2xl text-gray-200 max-w-2xl mx-auto mb-10">
+        Descubra o <span class="furia-gold font-bold">Chat Furioso</span>: uma
+        experiência inovadora para fãs da FURIA! Converse com uma inteligência
+        artificial sobre o time, tire dúvidas, veja estatísticas de jogos,
+        escalações e muito mais. Tudo com respostas precisas, personalizadas e
+        atualizadas.<br />
+        <span class="block mt-4 italic text-gray-400"
+          >Fique por dentro de tudo sobre a FURIA, 24 horas por dia!</span
+        >
+      </p>
+
+      <button
+        class="furia-btn text-xl px-10 py-4 mt-2"
+        onclick="window.location.href='chat.html'"
+      >
+        Acessar Chat
+      </button>
+    </main>
+
+    <!-- Imagem/Mockup -->
+    <div class="flex justify-center items-end w-full relative z-10 mt-8 mb-8">
+      <img
+        src="resources/images/chat.jpg"
+        alt="FURIA"
+        class="furia-shadow rounded-2xl max-h-[600px] max-w-5xl w-4/5 object-cover border-4 border-[#bfa046]"
+      />
+    </div>
+
+    <!-- Gradiente no rodapé -->
+    <div class="furia-gradient-bottom"></div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Furioso</title>
+    <link rel="stylesheet" href="style/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="resources/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      marked.setOptions({
+        breaks: true,
+        gfm: true,
+        sanitize: false,
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="resources/images/furia_small.png"
+          alt="FURIA Logo"
+          class="logo"
+        />
+        <h1>Chat Furioso</h1>
+      </header>
+
+      <div class="chat-container">
+        <div class="chat-messages" id="chat-messages">
+          <div class="message bot">
+            Olá! Sou o assistente da FURIA. Como posso ajudar você hoje? Posso
+            falar sobre jogadores, partidas, campeonatos e muito mais!😁
+          </div>
+        </div>
+
+        <div class="input-container">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Digite sua mensagem..."
+            autocomplete="off"
+          />
+          <button id="send-button">Enviar</button>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
