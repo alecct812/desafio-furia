@@ -32,7 +32,7 @@ const config = {
     responseMimeType: 'text/plain',
 };
 
-const model = 'gemini-2.5-pro-exp-03-25'; //gemini-2.5-pro-exp-03-25 -> melhor porem no plano gratis é limitado
+const model = 'gemini-2.0-flash'; //gemini-2.5-pro-exp-03-25 -> melhor porem no plano gratis é limitado
                                   //Caso esse modelo acima não funcione, use o gemini-2.0-flash
 
 // Armazenamento do histórico de chat (em memória)
